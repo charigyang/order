@@ -1,6 +1,6 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@article{Yang2021Self,
+  author    =  "Yang, Charig and Lamdouar, Hala and Lu, Erika and Zisserman, Andrew and Xie, Weidi",
+  title     =   "Self-supervised Video Object Segmentation by Motion Grouping",
+  journal   =   "arXiv",
+  year      =   "2021",
 }

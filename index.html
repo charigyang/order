@@ -118,9 +118,9 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<title>Self-supervised Video Object Segmentation by Motion Grouping</title>
+	<meta property="og:image" content="./resources/teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Self-supervised Video Object Segmentation by Motion Grouping" />
 	<meta property="og:description" content="Paper description." />
 
 	<!-- Get from Google Analytics -->
@@ -138,54 +138,74 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">Self-supervised Video Object Segmentation by Motion Grouping</span>
+		<table align=center width=1000px>
+			<table align=center width=1000px>
 				<tr>
-					<td align=center width=100px>
+					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="https://charigyang.github.io/">
+							Charig Yang</a></span>
 						</center>
 					</td>
-					<td align=center width=100px>
+					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a href="https://twitter.com/hala_lamdouar/">
+							Hala Lamdouar</a></span>
 						</center>
 					</td>
-					<td align=center width=100px>
+					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="https://erikalu.com/">
+							Erika Lu</a></span>
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:24px"><a href="https://www.robots.ox.ac.uk/~az/">
+							Andrew Zisserman</a></span>
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:24px"><a href="https://weidixie.github.io/weidi-personal-webpage/">
+							Weidi Xie</a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
-			<table align=center width=250px>
+			<table align=center width=500px>
 				<tr>
-					<td align=center width=120px>
+					<td align=center width=500px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:24px">Visual Geometry Group, University of Oxford</span>
 						</center>
 					</td>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
-						</center>
-					</td>
+				</tr>
+			</table>
+
+			<table align=center width=250px>
+				<br>
+				<tr>
+					<span style="font-size:24px"><a href="">ArXiv</a> | 
+					<a href="https://github.com/charigyang/motiongrouping">Code</a> | 
+					<a href="./resources/bibtex.txt">Bibtex</a><br></span>
 				</tr>
 			</table>
 		</table>
 	</center>
 
 	<center>
-		<table align=center width=850px>
+		<table align=center width=1000px>
 			<tr>
-				<td width=260px>
+				<td width=1000px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:1000px" src="./resources/method_diagram.png"/>
 					</center>
 				</td>
 			</tr>
 		</table>
+		<!--
 		<table align=center width=850px>
 			<tr>
 				<td>
@@ -193,6 +213,7 @@
 				</td>
 			</tr>
 		</table>
+	-->
 	</center>
 
 	<hr>
@@ -201,18 +222,39 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				Animals have evolved highly functional visual systems to understand motion,
+				assisting perception even under complex environments.
+				In this paper, 
+				we work towards developing a computer vision system able
+				to segment objects by exploiting motion cues,
+				i.e. motion segmentation.
+				We make the following contributions:
+				First, we introduce a simple variant of the Transformer to segment optical flow frames into primary objects and the background.
+				Second,
+				we train the architecture in a self-supervised manner, i.e. without using any manual annotations.
+				Third,
+				we analyze several critical components of our method
+				and conduct thorough ablation studies to validate their necessity.
+				Fourth,
+				we evaluate the proposed architecture on public benchmarks (DAVIS2016, SegTrackv2, and FBMS59).
+				Despite using only optical flow as input,
+				our approach achieves superior results compared to previous state-of-the-art self-supervised methods,
+				while being an order of magnitude faster.
+				We additionally evaluate on a challenging camouflage dataset (MoCA),
+				significantly outperforming the other self-supervised approaches, and comparing favourably to the top supervised approach,
+				highlighting the importance of motion cues,
+				and the potential bias towards visual appearance in existing video segmentation models.
 			</td>
 		</tr>
 	</table>
 	<br>
-
+	<!--
 	<hr>
 	<center><h1>Talk</h1></center>
 	<p align="center">
 		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
 	</p>
-
+	
 	<table align=center width=800px>
 		<br>
 		<tr>
@@ -222,9 +264,10 @@
 			</center>
 		</tr>
 	</table>
+	-->
 	<hr>
-
-	<center><h1>Code</h1></center>
+	
+	<center><h1>Results</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -236,9 +279,29 @@
 	</table>
 	<table align=center width=400px>
 		<tr>
-			<td align=center width=400px>
+			<td align=center width=200px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:200px" src="./resources/flatfish_1.gif"/></td>
+				</center>
+			</td>
+			<td align=center width=200px>
+				<center>
+					<td><img class="round" style="width:200px" src="./resources/frog.gif"/></td>
+				</center>
+			</td>
+			<td align=center width=200px>
+				<center>
+					<td><img class="round" style="width:200px" src="./resources/spider_tailed_horned_viper_3.gif"/></td>
+				</center>
+			</td>
+			<td align=center width=200px>
+				<center>
+					<td><img class="round" style="width:200px" src="./resources/soapbox.gif"/></td>
+				</center>
+			</td>
+			<td align=center width=200px>
+				<center>
+					<td><img class="round" style="width:200px" src="./resources/pygmy_seahorse_2.gif"/></td>
 				</center>
 			</td>
 		</tr>
@@ -246,29 +309,36 @@
 	<table align=center width=850px>
 		<center>
 			<tr>
+				<!--
 				<td>
-					Short description if wanted
+					Coming soon...
 				</td>
+			-->
 			</tr>
 		</center>
 	</table>
+	<!--
 	<table align=center width=800px>
 		<br>
 		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/charigyang/motiongrouping'>[GitHub]</a>
 			</center>
 		</span>
 	</table>
 	<br>
+-->
+
 	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
+	<table align=center width=800px>
+		<center><h1>Publication</h1></center>
 		<tr>
 			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
+			<td><span style="font-size:14pt">C. Yang, H. Lamdouar, E. Lu, A. Zisserman, W. Xie<br>
+				<b>Self-supervised Video Object Segmentation by Motion Grouping</b><br>
+				<!--2021.<br>-->
+				<a href="">ArXiv</a> | 
+				<a href="https://github.com/charigyang/motiongrouping">Code</a> | 
+				<a href="./resources/bibtex.txt">Bibtex</a><br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
@@ -276,14 +346,15 @@
 		</tr>
 	</table>
 	<br>
-
+	<br>
+	<!--
 	<table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
 				<a href="./resources/bibtex.txt">[Bibtex]</a>
 			</center></td>
 		</tr>
-	</table>
+	</table>-->
 
 	<hr>
 	<br>
