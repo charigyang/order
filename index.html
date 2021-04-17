@@ -272,34 +272,44 @@
 	
 	<center><h1>Results</h1></center>
 
-	<table align=center width=420px>
+	<table align=center width=1000px>
 		<center>
 			<tr>
 				<td>
 				<center>
-					<td><img class="round" style="width:500px" src="./resources/graph.png"/></td>
+					<td><img class="round" style="width:1000px" src="./resources/graph.png"/></td>
 				</center>
 				</td>
 			</tr>
 		</center>
 	</table>
 	<br>
+	<table align=center width=1000px>
+		<tr>
+			<td>
 	<strong>Results comparison on DAVIS2016.</strong>
 	Note that, supervised approaches may use models pretrained on ImageNet,
 	but here we only count number of images with pixel-wise annotations.
+			</td>
+		</tr>
+	</table>
+
 	<br><br>
-	<table align=center width=420px>
+	<table align=center width=1000px>
 		<center>
 			<tr>
 				<td>
 				<center>
-					<td><img class="round" style="width:800px" src="./resources/main.png"/></td>
+					<td><img class="round" style="width:1000px" src="./resources/main.png"/></td>
 				</center>
 				</td>
 			</tr>
 		</center>
 	</table>
 	<br>
+	<table align=center width=1000px>
+		<tr>
+			<td>
 	<strong>Full comparison on unsupervised video segmentation.</strong>
 	We consider three popular datasets, DAVIS2016, SegTrack-v2 (STv2), and FBMS59.
 	Models above the horizontal dividing line are trained without using any manual annotation,
@@ -307,24 +317,36 @@
 	thus requiring ground truth annotations at training time.
 	Numbers in parentheses denote the additional usage of significant post-processing, 
 	e.g. multi-step flow, multi-crop, temporal smoothing, CRFs.
+			</td>
+		</tr>
+	</table>
+
 	<br><br>
-	<table align=center width=420px>
+	<table align=center width=1000px>
 		<center>
 			<tr>
 				<td>
 				<center>
-					<td><img class="round" style="width:800px" src="./resources/moca.png"/></td>
+					<td><img class="round" style="width:1000px" src="./resources/moca.png"/></td>
 				</center>
 				</td>
 			</tr>
 		</center>
 	</table>
 	<br>
+	<table align=center width=1000px>
+		<tr>
+			<td>
 	<strong>Comparison results on MoCA dataset.</strong>
 	We report the successful localization rate for various thresholds.
 	Both CIS and Ours were pre-trained on DAVIS and finetuned on MoCA in a self-supervised manner.
 	Note that, our method achieves comparable Jaccard to MATNet (2nd best model on DAVIS), 
 	without using RGB inputs and without any manual annotation for training.
+			</td>
+		</tr>
+	</table>
+
+
 	
 	<br><br>
 	<hr>
