@@ -119,24 +119,24 @@
 <html>
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9KZDNK35J"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJFX2BFB9X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-W9KZDNK35J');
+  gtag('config', 'G-WJFX2BFB9X');
 </script>
-	<title>Self-supervised Video Object Segmentation by Motion Grouping</title>
-	<meta property="og:image" content="./resources/teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Self-supervised Video Object Segmentation by Motion Grouping" />
-	<meta property="og:description" content="C. Yang, H. Lamdouar, E. Lu, A. Zisserman, W. Xie" />
+	<title>It's About Time: Analog clock Reading in the Wild</title>
+	<meta property="og:image" content="./res/data.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="It's About Time: Analog clock Reading in the Wild" />
+	<meta property="og:description" content="C. Yang, W. Xie, A. Zisserman" />
 </head>
 
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Self-supervised Video Object Segmentation by Motion Grouping</span>
+		<span style="font-size:36px">It's About Time: Analog clock Reading in the Wild</span>
 		<table align=center width=1000px>
 			<table align=center width=1000px>
 				<tr>
@@ -148,26 +148,14 @@
 					</td>
 					<td align=center width=200px>
 						<center>
-							<span style="font-size:22px"><a href="https://twitter.com/hala_lamdouar/">
-							Hala Lamdouar</a></span>
+							<span style="font-size:22px"><a href="https://weidixie.github.io/weidi-personal-webpage/">
+							Weidi Xie</a></span>
 						</center>
-					</td>
-					<td align=center width=200px>
-						<center>
-							<span style="font-size:22px"><a href="https://erikalu.com/">
-							Erika Lu</a></span>
-						</center>
-					</td>
+					</td>					
 					<td align=center width=200px>
 						<center>
 							<span style="font-size:22px"><a href="https://www.robots.ox.ac.uk/~az/">
 							Andrew Zisserman</a></span>
-						</center>
-					</td>
-					<td align=center width=200px>
-						<center>
-							<span style="font-size:22px"><a href="https://weidixie.github.io/weidi-personal-webpage/">
-							Weidi Xie</a></span>
 						</center>
 					</td>
 				</tr>
@@ -187,7 +175,7 @@
 				<tr>
 					<td align=center width=500px>
 						<center>
-							<span style="font-size:22px">ICCV 2021</span>
+							<span style="font-size:22px">Arxiv 2021</span>
 						</center>
 					</td>
 				</tr>
@@ -197,10 +185,9 @@
 				<br>
 				<tr>
 					<span style="font-size:22px">
-				<a href="./resources/motiongroup.pdf">PDF</a> | 
-				<a href="https://arxiv.org/abs/2104.07658">ArXiv</a> | 
-				<a href="https://github.com/charigyang/motiongrouping">Code</a> | 
-					<a href="./resources/bibtex.txt">Bibtex</a><br></span>
+				<a href=".">ArXiv</a> | 
+				<a href="https://github.com/charigyang/itsabouttime">Code</a> | 
+					<a href="./res/bibtex.txt">Bibtex</a><br></span>
 				</tr>
 			</table>
 		</table>
@@ -211,7 +198,7 @@
 			<tr>
 				<td width=1000px>
 					<center>
-						<img class="round" style="width:1000px" src="./resources/method_diagram.png"/>
+						<img class="round" style="width:1000px" src="./res/arch.png"/>
 					</center>
 				</td>
 			</tr>
@@ -233,40 +220,19 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Animals have evolved highly functional visual systems to understand motion,
-				assisting perception even under complex environments.
-				In this paper, 
-				we work towards developing a computer vision system able
-				to segment objects by exploiting motion cues,
-				i.e. motion segmentation.
-				We make the following contributions:
-				First, we introduce a simple variant of the Transformer to segment optical flow frames into primary objects and the background.
-				Second,
-				we train the architecture in a self-supervised manner, i.e. without using any manual annotations.
-				Third,
-				we analyze several critical components of our method
-				and conduct thorough ablation studies to validate their necessity.
-				Fourth,
-				we evaluate the proposed architecture on public benchmarks (DAVIS2016, SegTrackv2, and FBMS59).
-				Despite using only optical flow as input,
-				our approach achieves superior results compared to previous state-of-the-art self-supervised methods,
-				while being an order of magnitude faster.
-				We additionally evaluate on a challenging camouflage dataset (MoCA),
-				significantly outperforming the other self-supervised approaches, and comparing favourably to the top supervised approach,
-				highlighting the importance of motion cues,
-				and the potential bias towards visual appearance in existing video segmentation models.
+				In this paper, we present a framework for reading analog clocks in natural images or videos. Specifically, we make the following contributions: First, we create a scalable pipeline for generating synthetic clocks, significantly reducing the requirements for the labour-intensive annotations; Second, we introduce a clock recognition architecture based on spatial transformer networks (STN), which is trained end-to-end for clock alignment and recognition. We show that the model trained on the proposed synthetic dataset generalises towards real clocks with good accuracy, advocating a Sim2Real training regime; Third, to further reduce the gap between simulation and real data, we leverage the special property of time, i.e. uniformity, to generate reliable pseudo-labels on real unlabelled clock videos, and show that training on these videos offers further improvements while still requiring zero manual annotations. Lastly, we introduce three benchmark datasets based on COCO, Open Images, and The Clock movie, totalling 4,472 images with clocks, with full annotations for time, accurate to the minute.
 			</td>
 		</tr>
 	</table>
 	<br>
-	
+	<!--
 	<hr>
 	<center><h1>Video</h1></center>
 	<p align="center">
 		<iframe width="660" height="395" src="https://www.youtube.com/embed/ZTn0xRJvndU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
 	</p>
 	
-
+	
 	<hr>
 	
 	<center><h1>Results</h1></center>
@@ -420,6 +386,7 @@
 			</td>
 		</tr>
 	</table>
+	-->
 	<table align=center width=850px>
 		<center>
 			<tr>
@@ -446,14 +413,13 @@
 	<table align=center width=800px>
 		<center><h1>Publication</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">C. Yang, H. Lamdouar, E. Lu, A. Zisserman, W. Xie<br>
-				<b>Self-supervised Video Object Segmentation by Motion Grouping</b><br>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./res/paper.png"/></a></td>
+			<td><span style="font-size:14pt">C. Yang, W. Xie, A. Zisserman<br>
+				<b>It's About Time: Analog Clock Reading in the Wild</b><br>
 				<!--2021.<br>-->
-				<a href="./resources/motiongroup.pdf">PDF</a> | 
-				<a href="https://arxiv.org/abs/2104.07658">ArXiv</a> | 
-				<a href="https://github.com/charigyang/motiongrouping">Code</a> | 
-				<a href="./resources/bibtex.txt">Bibtex</a><br>
+				<a href=".">ArXiv</a> | 
+				<a href="https://github.com/charigyang/itsabouttime">Code</a> | 
+				<a href="./res/bibtex.txt">Bibtex</a><br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
@@ -479,8 +445,7 @@
 			<td width=400px>
 				<left>
 					<center><h1>Acknowledgements</h1></center>
-					This research is supported by Google-DeepMind Studentship, UK EPSRC CDT in AIMS, 
-					Schlumberger Studentship, and the UK EPSRC Programme Grant Visual AI (EP/T028572/1). 
+					We thank Guanqi Zhan, Ragav Sachdeva, K R Prajwal, and Aleksandar Shtedritski for help with proofreading. This research is supported by the UK EPSRC CDT in AIMS, a Royal Society Research Professorship, and the UK EPSRC Programme Grant Visual AI (EP/T028572/1).
 					<br>
 					<br>
 
