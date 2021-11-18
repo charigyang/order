@@ -2,7 +2,7 @@
       title={It's About Time: Analog Clock Reading in the Wild}, 
       author={Charig Yang and Weidi Xie and Andrew Zisserman},
       year={2021},
-      eprint={2111.**},
+      eprint={2111.09162},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
