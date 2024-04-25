@@ -1,8 +1,8 @@
 @article{yang2021its,
-      title={It's About Time: Analog Clock Reading in the Wild}, 
+      title={Made to Order: Discovering monotonic temporal changes via self-supervised video ordering}, 
       author={Charig Yang and Weidi Xie and Andrew Zisserman},
-      year={2021},
-      eprint={2111.09162},
+      year={2024},
+      eprint={xx},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
