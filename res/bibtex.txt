@@ -2,7 +2,7 @@
       title={Made to Order: Discovering monotonic temporal changes via self-supervised video ordering}, 
       author={Charig Yang and Weidi Xie and Andrew Zisserman},
       year={2024},
-      eprint={xx},
+      eprint={2404.16828},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
